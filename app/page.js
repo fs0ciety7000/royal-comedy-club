@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Castle, Gem, CloudRain, HeartCrack, Flame } from 'lucide-react';
+import { TrendingDown, AlertOctagon, XCircle, CheckCircle2, ArrowRight } from 'lucide-react';
 
 const FadeIn = ({ children, delay = 0 }) => (
   <motion.div
@@ -16,22 +16,24 @@ const FadeIn = ({ children, delay = 0 }) => (
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col font-sans bg-slate-950">
+    <main className="min-h-screen flex flex-col font-sans bg-slate-950 text-slate-200">
       
-      {/* --- Navigation --- */}
-      <nav className="fixed w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-amber-900/30">
+      {/* --- Navigation (Corrigée : items-center pour l'alignement) --- */}
+      <nav className="fixed w-full z-50 bg-slate-950/90 backdrop-blur-md border-b border-white/5">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center gap-4">
-            {/* LOGO PNG ICI */}
-            <img src="/logo.png" alt="Logo RCC" className="h-12 w-auto object-contain" />
+            <img src="/logo.png" alt="Logo RCC" className="h-12 w-auto object-contain hover:grayscale transition-all" />
             <div className="flex flex-col">
-              <span className="text-xl font-serif tracking-widest text-amber-400 uppercase">RCC</span>
-              <span className="text-xs tracking-widest text-slate-500 uppercase">Royal (Pain in the Ass) Club</span>
+              <span className="text-xl font-serif tracking-widest text-white uppercase">RCC</span>
+              <span className="text-[10px] tracking-[0.2em] text-slate-500 uppercase">Département des Plaintes</span>
             </div>
           </div>
-          <div className="hidden md:flex gap-8 text-sm uppercase tracking-widest text-slate-300">
-            <a href="#constat" className="hover:text-amber-400 transition-colors">Le Paradis Perdu</a>
-            <a href="/membres" className="px-6 py-2 border border-amber-600 text-amber-500 hover:bg-amber-600 hover:text-black transition-all">
+          {/* AJOUT DE 'items-center' ICI pour aligner le lien et le bouton */}
+          <div className="hidden md:flex items-center gap-8 text-xs font-bold uppercase tracking-widest text-slate-400">
+            <a href="#downgrade" className="hover:text-white transition-colors border-b border-transparent hover:border-white pb-1">
+              Le Paradis Perdu
+            </a>
+            <a href="/membres" className="px-6 py-3 border border-white/20 text-white hover:bg-white hover:text-black transition-all">
               Les Exilés
             </a>
           </div>
@@ -39,97 +41,133 @@ export default function Home() {
       </nav>
 
       {/* --- Hero Section --- */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-slate-900">
-        {/* Fond subtil "Pluie belge" */}
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')] opacity-5"></div>
+      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-slate-950">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-800 via-slate-950 to-black opacity-40"></div>
         
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
           <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.8 }}
           >
-            <div className="flex justify-center items-center gap-4 mb-6">
-                <Castle className="text-amber-600 w-8 h-8" />
-                <span className="h-px w-20 bg-amber-600/50"></span>
-                <Flame className="text-amber-600 w-8 h-8" /> 
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-red-900/50 bg-red-950/20 text-red-400 text-xs tracking-widest uppercase mb-8">
+              <AlertOctagon size={14} /> Incident Critique en cours
             </div>
 
-            <h2 className="text-amber-500 tracking-[0.2em] text-sm md:text-lg uppercase mb-4 font-bold">
-              De la Cité du Doudou... au Manneken Pis
-            </h2>
-            
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-yellow-400 to-amber-600 mb-8 leading-tight drop-shadow-lg">
-              La Grande <br/> Déportation
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-6 leading-tight">
+              RCC <span className="text-slate-600">Bruxelles</span>
             </h1>
             
-            <p className="text-lg md:text-2xl text-slate-300 font-light mb-12 max-w-3xl mx-auto leading-relaxed">
-              Adieu <span className="text-amber-400 font-semibold">l'OCC</span>, notre Pairi Daiza du travail. <br/>
-              Bonjour Bruxelles, ses tunnels, sa grisaille et son "Royal" Comedy Club.
+            <p className="text-xl md:text-2xl text-slate-400 font-light mb-10 max-w-3xl mx-auto leading-relaxed">
+              De la Cité du Doudou au Mordor administratif. <br/>
+              <span className="italic text-slate-500 text-base">"On avait des dragons, maintenant on a des tableurs."</span>
             </p>
 
             <div className="flex flex-col md:flex-row gap-6 justify-center">
-              <a href="/membres" className="bg-amber-600 text-slate-950 px-8 py-4 font-serif text-lg font-bold hover:bg-amber-500 transition-all shadow-[0_0_20px_rgba(217,119,6,0.3)]">
-                Voir les sinistrés
+              <a href="/membres" className="bg-white text-black px-8 py-4 font-serif text-lg font-bold hover:bg-slate-200 transition-all">
+                Voir l'équipe de crise
               </a>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* --- Le Comparatif (OCC vs RCC) --- */}
-      <section id="constat" className="py-24 bg-slate-950 px-6 border-t border-amber-900/20">
-        <div className="max-w-7xl mx-auto">
+      {/* --- Le Comparatif (Nouvelle Version : "Downgrade Report") --- */}
+      <section id="downgrade" className="py-24 bg-black px-6 border-t border-white/10">
+        <div className="max-w-6xl mx-auto">
           
-          <div className="text-center mb-16">
-            <h3 className="text-3xl md:text-4xl font-serif text-slate-100 mb-4">Le Choc des Cultures</h3>
-            <p className="text-slate-500">Analyse objective (et un peu amère) de la situation.</p>
+          <div className="text-center mb-20">
+            <h3 className="text-3xl font-serif text-white mb-2">Rapport de Migration</h3>
+            <p className="text-slate-500 font-mono text-sm">Status: ÉCHEC CRITIQUE</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12">
+          {/* Tableau de comparaison façon "Specs techniques" */}
+          <div className="grid md:grid-cols-2 gap-0 border border-white/10 rounded-lg overflow-hidden">
             
-            {/* Colonne GAUCHE : OCC (Le Paradis) */}
-            <FadeIn>
-              <div className="bg-slate-900/50 p-8 border-l-4 border-green-500 h-full">
-                <div className="flex items-center gap-3 mb-6">
-                   <div className="p-3 bg-green-900/20 rounded-full"><Castle className="text-green-500" /></div>
-                   <h4 className="text-2xl font-serif text-green-400">L'OCC (Mons)</h4>
-                </div>
-                <ul className="space-y-4 text-slate-300">
-                  <li className="flex gap-3"><Gem className="text-green-500 w-5 h-5 shrink-0" /> Ambiance chatoyante & Panda Friendly.</li>
-                  <li className="flex gap-3"><Gem className="text-green-500 w-5 h-5 shrink-0" /> Travail exemplaire (entre deux rires).</li>
-                  <li className="flex gap-3"><Gem className="text-green-500 w-5 h-5 shrink-0" /> Entente cordiale, presque familiale.</li>
-                  <li className="flex gap-3"><Gem className="text-green-500 w-5 h-5 shrink-0" /> C'était le Pairi Daiza de l'Open Space.</li>
-                </ul>
+            {/* OCC - The Good Old Days */}
+            <div className="bg-slate-900/50 p-10 relative group">
+              <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                 <CheckCircle2 size={100} />
               </div>
-            </FadeIn>
+              <h4 className="text-xl font-bold text-green-500 mb-2 flex items-center gap-3">
+                <span className="text-xs bg-green-900/30 border border-green-800 px-2 py-1 rounded text-green-400">V1.0 (Stable)</span>
+                L'OCC Mons
+              </h4>
+              <p className="text-slate-500 text-sm mb-8 font-serif italic">"Le Pairi Daiza du Tertiaire"</p>
+              
+              <div className="space-y-6">
+                 <div>
+                    <span className="block text-xs uppercase tracking-widest text-slate-500 mb-1">Ambiance</span>
+                    <div className="text-slate-200">Chatoyante & Familiale</div>
+                 </div>
+                 <div>
+                    <span className="block text-xs uppercase tracking-widest text-slate-500 mb-1">Symbole</span>
+                    <div className="text-slate-200">Le Dragon (Badass)</div>
+                 </div>
+                 <div>
+                    <span className="block text-xs uppercase tracking-widest text-slate-500 mb-1">Temps de trajet</span>
+                    <div className="text-slate-200">15 min (En chantant)</div>
+                 </div>
+                 <div>
+                    <span className="block text-xs uppercase tracking-widest text-slate-500 mb-1">Qualité de vie</span>
+                    <div className="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                        <div className="bg-green-500 h-full w-[98%]"></div>
+                    </div>
+                 </div>
+              </div>
+            </div>
 
-            {/* Colonne DROITE : RCC (L'Enfer) */}
-            <FadeIn delay={0.2}>
-              <div className="bg-slate-900/50 p-8 border-l-4 border-red-500 h-full relative overflow-hidden">
-                <div className="absolute -right-10 -top-10 text-red-900/10 rotate-12">
-                    <CloudRain size={200} />
-                </div>
-                <div className="flex items-center gap-3 mb-6 relative z-10">
-                   <div className="p-3 bg-red-900/20 rounded-full"><HeartCrack className="text-red-500" /></div>
-                   <h4 className="text-2xl font-serif text-red-400">Le RCC (Bruxelles)</h4>
-                </div>
-                <ul className="space-y-4 text-slate-400 relative z-10">
-                  <li className="flex gap-3"><CloudRain className="text-red-500 w-5 h-5 shrink-0" /> Grisaille certifiée ISO 9001.</li>
-                  <li className="flex gap-3"><CloudRain className="text-red-500 w-5 h-5 shrink-0" /> On cherche encore l'humour (et le parking).</li>
-                  <li className="flex gap-3"><CloudRain className="text-red-500 w-5 h-5 shrink-0" /> "Royal" c'est pour faire passer la pilule.</li>
-                  <li className="flex gap-3"><CloudRain className="text-red-500 w-5 h-5 shrink-0" /> 2h de trajet pour manger un sandwich mou.</li>
-                </ul>
+            {/* RCC - The Disaster */}
+            <div className="bg-red-950/10 p-10 relative border-t md:border-t-0 md:border-l border-white/10 group">
+               <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity text-red-600">
+                 <XCircle size={100} />
               </div>
-            </FadeIn>
+              <h4 className="text-xl font-bold text-red-500 mb-2 flex items-center gap-3">
+                <span className="text-xs bg-red-900/30 border border-red-800 px-2 py-1 rounded text-red-400">V2.0 (Bugged)</span>
+                RCC Bruxelles
+              </h4>
+              <p className="text-slate-500 text-sm mb-8 font-serif italic">"Erreur 404: Joie not found"</p>
+              
+              <div className="space-y-6">
+                 <div>
+                    <span className="block text-xs uppercase tracking-widest text-slate-500 mb-1">Ambiance</span>
+                    <div className="text-slate-200">Béton brut & Lumière néon</div>
+                 </div>
+                 <div>
+                    <span className="block text-xs uppercase tracking-widest text-slate-500 mb-1">Symbole</span>
+                    <div className="text-slate-200">Le Manneken Pis (Un gars qui pisse)</div>
+                 </div>
+                 <div>
+                    <span className="block text-xs uppercase tracking-widest text-slate-500 mb-1">Temps de trajet</span>
+                    <div className="text-slate-200">2h (En pleurant)</div>
+                 </div>
+                 <div>
+                    <span className="block text-xs uppercase tracking-widest text-slate-500 mb-1">Qualité de vie</span>
+                    <div className="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                        <div className="bg-red-600 h-full w-[12%]"></div>
+                    </div>
+                 </div>
+              </div>
+            </div>
 
           </div>
+
+          <div className="mt-12 text-center">
+            <div className="inline-flex items-center gap-3 text-slate-400 text-sm border border-slate-800 px-6 py-4 rounded bg-slate-900/50">
+               <TrendingDown className="text-red-500" />
+               <span>Analyse : La perte de productivité est directement proportionnelle à la distance avec la Grand-Place de Mons.</span>
+            </div>
+          </div>
+
         </div>
       </section>
 
       {/* --- Footer --- */}
-      <footer className="bg-black py-8 border-t border-amber-900/30 text-center">
-          <p className="text-slate-600 text-sm">© 2024 RCC. Rendez-nous notre Beffroi.</p>
+      <footer className="bg-black py-12 border-t border-white/10 flex flex-col items-center justify-center gap-4">
+          <p className="text-slate-600 text-sm uppercase tracking-widest">© 2024 RCC - Royal Complaint Club</p>
+          <a href="/membres" className="text-xs text-slate-700 hover:text-white flex items-center gap-2 transition-colors">
+            Rejoindre Patrick et Julien <ArrowRight size={12} />
+          </a>
       </footer>
     </main>
   );
