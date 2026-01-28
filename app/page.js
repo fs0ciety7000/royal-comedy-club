@@ -27,7 +27,7 @@ export default function Home() {
             <img src="/logo.png" alt="Logo RCC" className="h-12 w-auto object-contain drop-shadow-[0_0_8px_rgba(217,119,6,0.5)]" />
             <div className="flex flex-col">
               <span className="text-xl font-serif tracking-widest text-amber-500 uppercase font-bold">RCC</span>
-              <span className="text-[10px] tracking-[0.25em] text-slate-500 uppercase">Bureau des Pleurs</span>
+              <span className="text-[10px] tracking-[0.25em] text-slate-500 uppercase">Royal Comedy Club</span>
             </div>
           </div>
           

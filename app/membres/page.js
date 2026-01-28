@@ -7,27 +7,27 @@ import { Crown, AlertTriangle, Bone } from 'lucide-react';
 const members = [
   {
     name: "Sa Majesté Patrick",
-    role: "Gardien du Temple Montois",
+    role: "Mascotte non-homologuée",
     surnom: "Le Roi sans Royaume",
     desc: "Il régnait sur l'OCC avec bienveillance et charisme. Aujourd'hui, il erre dans les couloirs du RCC en cherchant désespérément un dragon à caresser. Il considère le déménagement comme un crime de lèse-majesté.",
     img: "/patrick.png", // Image locale
-    skill: "Peut citer tout l'historique de l'OCC en pleurant."
+    skill: "Au plus proche de Pairi Daiza, qu'on s'y croirait."
   },
   {
     name: "Monseigneur Julien",
     role: "Grand Chambellan du Déménagement",
     surnom: "Le Traître (malgré lui)",
-    desc: "C'est lui qui a les clés du camion, mais on sait qu'il regrette. Il tente de reproduire l'ambiance 'Pairi Daiza' en mettant des plantes vertes en plastique sur les bureaux gris de Bruxelles.",
+    desc: "Il régnait sur l'OCC avec bienveillance et charisme. Aujourd'hui, il erre dans les couloirs du RCC en cherchant désespérément un dragon à caresser. ",
     img: "/julien.png", // Image locale
     skill: "Sait sourire même quand il pleut (càd tout le temps)."
   },
   {
     name: "L'Inconnu du 3ème Type",
-    role: "Mascotte non-homologuée",
+    role: "Mascotte homologuée",
     surnom: "Le Chien",
     desc: "Personne ne sait comment il est arrivé là. Il est le seul à apprécier Bruxelles car il y a plus de poteaux. C'est le seul membre du RCC qui est content d'être là (parce qu'on lui donne des croquettes).",
     img: "/chien.png", // Image locale
-    skill: "Aboie pendant les Teams importantes."
+    skill: "Aboie pendant les Incidents."
   }
 ];
 
