@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gold-gradient: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+}
+
+.text-gold {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.border-gold {
+  border-image: var(--gold-gradient);
+  border-image-slice: 1;
+}
+
+.bg-gold-subtle {
+  background: radial-gradient(circle at center, #2a2a2a 0%, #0a0a0a 100%);
+}
