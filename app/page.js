@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Crown, Tie, Briefcase, Award, Star, Quote } from 'lucide-react';
+import { Crown, Gem, Briefcase, Award, Star, Quote } from 'lucide-react';
 
 // Composant Logo "Chèvre" stylisé
 const GoatLogo = () => (
@@ -107,7 +107,7 @@ export default function Home() {
             <div className="relative border border-amber-900/50 p-8 bg-slate-900/50 rotate-2 hover:rotate-0 transition-transform duration-500">
               <Quote className="absolute top-4 left-4 text-amber-800 w-12 h-12 opacity-50" />
               <p className="font-serif text-2xl text-center italic text-amber-100/90 py-10">
-                "J'ai compris le sens de la vie d'entreprise le jour où j'ai remplacé mon PowerPoint par un animal en ballon."
+                "J'ai compris le sens de la vie d'entreprise le jour où j'ai remplacé WeBe par un animal en ballon."
               </p>
               <div className="text-center">
                 <p className="text-amber-500 font-bold uppercase tracking-widest text-sm">Jean-Eudes de la Comptabilité</p>
@@ -129,7 +129,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { 
-                icon: Tie, 
+                icon: Gem, 
                 title: "Le Gala Cravate & Confettis", 
                 desc: "Un dîner mondain où le champagne est servi dans des fleurs arroseuses. Tenue de soirée exigée, nez rouge optionnel." 
               },
@@ -163,7 +163,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex flex-col items-center md:items-start">
              <GoatLogo />
-             <p className="mt-4 text-slate-500 text-sm">© 2024 Royal Comedy Club. <br/>Tous droits réservés (et tordus).</p>
+             <p className="mt-4 text-slate-500 text-sm">© 2026 Royal Comedy Club. <br/>Tous droits réservés (et tordus).</p>
           </div>
           <div className="flex gap-8 text-slate-400 text-sm">
              <a href="#" className="hover:text-amber-500">Mentions Légales</a>
