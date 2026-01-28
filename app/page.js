@@ -43,8 +43,8 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* --- Hero Section (Luxe & Mélancolie) --- */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-slate-950">
+     {/* --- Hero Section (Modifiée avec Logo Central) --- */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-950 pt-20 pb-10">
         {/* Fond texturé Or très subtil */}
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03]"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-950/50 to-slate-950"></div>
@@ -55,19 +55,35 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
           >
+            {/* Badge */}
             <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-amber-900/40 bg-amber-950/10 text-amber-500/80 text-[10px] tracking-[0.3em] uppercase mb-8">
               <Skull size={12} /> Requiem pour l'OCC
             </div>
 
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-500 to-amber-700 mb-8 leading-tight drop-shadow-sm">
+            {/* Titre Principal */}
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-500 to-amber-700 mb-6 leading-tight drop-shadow-sm">
               La Grande <br/> Déportation
             </h1>
+
+            {/* --- NOUVEAU : Logo Central & Nom du Club --- */}
+            <div className="flex flex-col items-center justify-center mb-8">
+                <img 
+                    src="/logo.png" 
+                    alt="Logo Royal" 
+                    className="h-24 md:h-32 w-auto object-contain drop-shadow-[0_0_25px_rgba(217,119,6,0.3)] mb-4 hover:scale-105 transition-transform duration-500"
+                />
+                <h2 className="text-2xl md:text-3xl font-serif text-amber-100 tracking-[0.2em] uppercase border-b border-amber-900/30 pb-2">
+                    Royal Comedy Club
+                </h2>
+            </div>
             
+            {/* Citation */}
             <p className="text-xl md:text-2xl text-slate-400 font-light mb-12 max-w-3xl mx-auto leading-relaxed font-serif italic">
-              "Nous avons quitté la Cité du Doudou pour le Mordor. <br/>
+              "Nous avons quitté la Cité du Doudou pour la Cité des Bouchons. <br/>
               Le prestige est intact, mais le moral est en option."
             </p>
 
+            {/* Bouton */}
             <div className="flex flex-col md:flex-row gap-6 justify-center">
               <a href="/membres" className="group relative px-8 py-4 bg-transparent overflow-hidden rounded-sm border border-amber-600 text-amber-500 font-serif text-lg tracking-wider hover:text-slate-950 transition-colors duration-300">
                 <div className="absolute inset-0 w-0 bg-amber-600 transition-all duration-[250ms] ease-out group-hover:w-full"></div>

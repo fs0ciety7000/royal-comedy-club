@@ -8,7 +8,7 @@ const members = [
   {
     name: "Sa Majesté Patrick",
     role: "Mascotte non-homologuée",
-    surnom: "Le Roi sans Royaume",
+    surnom: "Fétide",
     desc: "Il régnait sur l'OCC avec bienveillance et charisme. Aujourd'hui, il erre dans les couloirs du RCC en cherchant désespérément un dragon à caresser. Il considère le déménagement comme un crime de lèse-majesté.",
     img: "/patrick.png", // Image locale
     skill: "Au plus proche de Pairi Daiza, qu'on s'y croirait."
@@ -16,7 +16,7 @@ const members = [
   {
     name: "Monseigneur Julien",
     role: "Grand Chambellan du Déménagement",
-    surnom: "Le Traître (malgré lui)",
+    surnom: "Pika",
     desc: "Il régnait sur l'OCC avec bienveillance et charisme. Aujourd'hui, il erre dans les couloirs du RCC en cherchant désespérément un dragon à caresser. ",
     img: "/julien.png", // Image locale
     skill: "Sait sourire même quand il pleut (càd tout le temps)."
